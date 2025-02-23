@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import {
   Bot, MessageSquare, ArrowRight, LogIn,
-  Code, Zap, Workflow, Server, Menu, X, Star, User2, Shield
+  Code, Zap, Workflow, Server, Menu, X, Star, User2, Shield,
+  Truck, Phone
 } from 'lucide-react';
 import Layout from './components/Layout';
 

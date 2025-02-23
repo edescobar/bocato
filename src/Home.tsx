@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import {
-  Bot, MessageSquare, Truck, Phone, ArrowRight, LogIn, Shield,
-  Code, Zap, Workflow, Server, Menu, X, Star, User2
+  Bot, MessageSquare, Truck, Phone, ArrowRight, LogIn,
+  Code, Zap, Workflow, Server, Menu, X, Star, User2, Shield
 } from 'lucide-react';
 import Layout from './components/Layout';
 

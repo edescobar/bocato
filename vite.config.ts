@@ -8,11 +8,12 @@ export default defineConfig({
     include: ['framer-motion', '@react-spring/web', 'react-countup'],
   },
   build: {
+    minify: 'esbuild',
     rollupOptions: {
       output: {
         manualChunks: {
           'react-vendor': ['react', 'react-dom'],
-          'animation-vendor': ['framer-motion'],
+          'framer-motion': ['framer-motion'],
         },
       },
     },

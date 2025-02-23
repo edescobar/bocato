@@ -1,42 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import {
-  Bot, MessageSquare, Truck, Phone, ArrowRight, LogIn, Shield,
-  Code, Zap, Workflow, Server, Headphones, Menu, X, Play, Pause, Check,
-  ChevronDown, Mail, MapPin, Star, User2, Twitter, Github, Linkedin
+  Bot, MessageSquare, Truck, Phone, ArrowRight, LogIn,
+  Code, Zap, Workflow, Server, Menu, X, Star, User2, Shield
 } from 'lucide-react';
 import Layout from './components/Layout';
 
-// Animation variants
-const fadeIn = {
-  initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6 }
-};
-
-const fadeInLeft = {
-  initial: { opacity: 0, x: -20 },
-  animate: { opacity: 1, x: 0 },
-  transition: { duration: 0.6 }
-};
-
-const staggerContainer = {
-  initial: { opacity: 0 },
-  animate: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2
-    }
-  }
-};
-
-// Add these interfaces at the top of the file
-interface AudioPlayerProps {
-  category: string;
-  name: string;
-}
-
+// Remove unused animation variants since they're not being used
 interface MobileMenuProps {
   isOpen: boolean;
   onClose: () => void;
@@ -56,27 +27,6 @@ function ScrollProgress() {
       className="fixed top-0 left-0 right-0 h-1 bg-racing-500 origin-left z-50"
       style={{ scaleX }}
     />
-  );
-}
-
-function AudioPlayer({ category, name }: AudioPlayerProps) {
-  const [isPlaying, setIsPlaying] = useState(false);
-  
-  return (
-    <div className="mt-4 bg-black/5 rounded-lg p-4">
-      <div className="flex items-center justify-between mb-4">
-        <div>
-          <div className="text-sm text-racing-500">{category}</div>
-          <div className="font-medium">{name}</div>
-        </div>
-        <button
-          onClick={() => setIsPlaying(!isPlaying)}
-          className="w-8 h-8 rounded-full bg-racing-500 text-white flex items-center justify-center hover:bg-racing-600 transition-colors"
-        >
-          {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
-        </button>
-      </div>
-    </div>
   );
 }
 

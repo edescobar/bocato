@@ -7,30 +7,7 @@ import {
 } from 'lucide-react';
 import Layout from './components/Layout';
 
-// Animation variants
-const fadeIn = {
-  initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6 }
-};
-
-const fadeInLeft = {
-  initial: { opacity: 0, x: -20 },
-  animate: { opacity: 1, x: 0 },
-  transition: { duration: 0.6 }
-};
-
-const staggerContainer = {
-  initial: { opacity: 0 },
-  animate: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2
-    }
-  }
-};
-
-// Add these interfaces at the top of the file
+// Remove unused animation variants since they're not being used
 interface MobileMenuProps {
   isOpen: boolean;
   onClose: () => void;

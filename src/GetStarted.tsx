@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { Bot, ArrowLeft, Clock, Video, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Layout from './components/Layout';
 
